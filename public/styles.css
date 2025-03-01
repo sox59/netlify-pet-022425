@@ -193,6 +193,22 @@ body {
   padding: 0 0 65px 0;
 }
 
+.site-footer .logout-text {
+
+  padding: 0;
+
+}
+
+.site-footer .logout-text button {
+
+  font-family: inherit;
+  background-color: transparent;
+  border: none;
+  text-decoration: underline;
+  color: #A6A6A6;
+
+}
+
 .list-of-pets {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
@@ -285,4 +301,34 @@ body {
     padding-top: 139px;
     padding-bottom: 139px;
   }
+}
+
+/* Admin Pages */
+
+.form-field {
+
+  display: block;
+  width: 100%;
+  padding: 10px 12px;
+  box-sizing: border-box;
+  font-size: 1rem;
+  margin: 0 0 16px 0;
+  border: 1 px solid rgba(0, 0, 0, .09);
+  font-family: inherit;
+}
+
+.mb-big {
+
+  margin-bottom: 25px;
+
+}
+
+.small-link {
+
+  display: inline-block;
+  font-size: .8rem;
+  color: #999;
+  position: relative;
+  z-index: 3;
+
 }
