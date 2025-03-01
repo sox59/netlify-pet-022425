@@ -5,19 +5,12 @@ const handler = async event => {
 
 
 
-
-
-
-
   const myCookie = cookie.serialize("petadoption", "-", {
 
     httpOnly: true,
     path: "/",
     sameSite: "strict",
     maxAge: 0
-
-
-
 
 
   })
@@ -30,8 +23,6 @@ const handler = async event => {
 
 
 }
-
-
 
 
 module.exports = { handler }
