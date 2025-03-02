@@ -4,7 +4,7 @@ async function start() {
 
   if (ourData.success) {
 
-    // do something interesting, show the pet management UI
+    document.querySelector("#render-here").innerHTML = ourData.pets
 
   } else {
 
