@@ -328,6 +328,15 @@ body {
   font-family: inherit;
 }
 
+textarea.form-field {
+
+  height: 150px;
+  resize: none;
+
+
+
+}
+
 .mb-big {
 
   margin-bottom: 25px;
