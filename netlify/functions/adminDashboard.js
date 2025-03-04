@@ -1,12 +1,13 @@
 
-const cookie = require("cookie")
+// const cookie = require("cookie")
 const { MongoClient } = require("mongodb")
+const isAdmin = require("../../our-library/isAdmin")
 
 const handler = async event => {
 
-  const incomingCookie = cookie.parse(event.headers.cookie || "")
 
-  if (incomingCookie?.petadoption == "hgreuf09ruiojvnmnj9090ruhvisjkiuhourhouhhguhenvkj") {
+
+  if (isAdmin(event)) {
 
     const client = new MongoClient(process.env.CONNECTIONSTRING)
     await client.connect()

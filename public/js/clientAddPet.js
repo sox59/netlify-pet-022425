@@ -21,7 +21,16 @@ document.querySelector("#add-new-pet-form").addEventListener("submit", async fun
   })
 
   const theResponse = await ourPromise.json()
-  window.location = "/admin"
+
+  if (theResponse.success) {
+
+    window.location = "/admin"
+
+  }
+
+
+
+
 
 
 })
