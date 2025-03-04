@@ -15,7 +15,7 @@ document.querySelector("#add-new-pet-form").addEventListener("submit", async fun
 
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    boby: JSON.stringify(pet)
+    body: JSON.stringify(pet)
 
 
   })
