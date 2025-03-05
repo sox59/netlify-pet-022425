@@ -1,5 +1,4 @@
 
-// const cookie = require("cookie")
 const { MongoClient } = require("mongodb")
 const isAdmin = require("../../our-library/isAdmin")
 
