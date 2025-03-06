@@ -21,7 +21,7 @@ const handler = async event => {
 
   let pet = {
 
-    name: cleanUp(body.name),
+    name: body.name,
     species: cleanUp(body.species),
     description: cleanUp(body.description),
     birthYear: new Date().getFullYear()
