@@ -22,6 +22,13 @@ async function getEditPet() {
   const pet = await ourPromise.json()
   console.log(pet)
 
+  if (!pet.name) {
+
+    window.location = "/admin"
+
+
+  }
+
 
 }
 
