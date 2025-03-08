@@ -35,7 +35,7 @@ const handler = async event => {
 
   let pet = {
 
-    name: body.name,
+    name: cleanUp(body.name),
     species: cleanUp(body.species),
     description: cleanUp(body.description),
     birthYear: new Date().getFullYear()
@@ -100,3 +100,4 @@ const handler = async event => {
 }
 
 module.exports = { handler }
+
