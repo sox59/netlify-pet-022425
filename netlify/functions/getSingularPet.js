@@ -34,6 +34,11 @@ const handler = async event => {
     const pet = await client.db().collection("pets").findOne({ _id: ObjectId.createFromHexString(body.id) })
     client.close()
 
+    pet.name = escape(pet.name)
+    pet.birthYear = escape(pet.birthYear)
+    pet.species = escape(pet.species)
+    pet.description = escape(pet.description)
+
 
 
     return {

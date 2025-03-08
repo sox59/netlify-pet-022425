@@ -29,7 +29,13 @@ async function getEditPet() {
 
   }
 
+  document.querySelector("#name").value = pet.name
+  document.querySelector("#birthYear").value = pet.birthYear
+  document.querySelector("#species").value = pet.species
+  document.querySelector("#description").value = pet.description
+
 
 }
 
 getEditPet()
+
