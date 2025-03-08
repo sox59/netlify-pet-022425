@@ -20,6 +20,19 @@ const handler = async event => {
 
   // data validation and sanitation
 
+  if (typeof body.name != "string") {
+
+    body.name = ""
+
+  }
+
+
+  if (typeof body.description != "string") {
+
+    body.description = ""
+
+  }
+
   let pet = {
 
     name: body.name,
