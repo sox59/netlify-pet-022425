@@ -34,6 +34,9 @@ async function getEditPet() {
   document.querySelector("#species").value = pet.species
   document.querySelector("#description").value = pet.description
 
+  document.querySelector("#edit-pet-form").classList.remove("form-is-loading")
+  document.querySelector("#name").focus()
+
 
 }
 
@@ -53,6 +56,8 @@ document.querySelector("#edit-pet-form").addEventListener("submit", async functi
 
   }
 
+
+  document.querySelector("#edit-pet-form").classList.add("form-is-loading")
 
   const ourPromise = await fetch("/.netlify/functions/saveChanges", {
 
