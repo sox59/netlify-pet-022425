@@ -1,5 +1,5 @@
 const escape = require("escape-html")
-const { MongoClient } = require("mongodb")
+const getDbClient = require("../../our-library/getDbClient")
 const isAdmin = require("../../our-library/isAdmin")
 
 const handler = async event => {
@@ -8,8 +8,7 @@ const handler = async event => {
 
   if (isAdmin(event)) {
 
-    const client = new MongoClient(process.env.CONNECTIONSTRING)
-    await client.connect()
+    const client = await getDbClient()
 
     const pets = await client.db().collection("pets").find().toArray()
     client.close()

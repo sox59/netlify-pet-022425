@@ -1,5 +1,6 @@
 const escape = require("escape-html")
-const { MongoClient, ObjectId } = require("mongodb")
+const { ObjectId } = require("mongodb")
+const getDbClient = require("../../our-library/getDbClient")
 const isAdmin = require("../../our-library/isAdmin")
 
 const handler = async event => {
@@ -25,8 +26,7 @@ const handler = async event => {
     }
 
 
-    const client = new MongoClient(process.env.CONNECTIONSTRING)
-    await client.connect()
+    const client = await getDbClient()
 
 
     //const pet = await client.db().collection("pets").findOne({ _id: new ObjectId(body.id) })
