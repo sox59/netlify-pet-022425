@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/sox59/netlify-pet-022425#readme",
   "dependencies": {
+    "cloudinary": "^2.6.0",
     "cookie": "^1.0.2",
     "escape-html": "^1.0.3",
     "mongodb": "^6.13.1",
