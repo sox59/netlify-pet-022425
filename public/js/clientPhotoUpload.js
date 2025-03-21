@@ -20,7 +20,7 @@ async function getSignature() {
 getSignature()
 
 
-document.querySelector("file-field").addEventListener("change", async function () {
+document.querySelector("#file-field").addEventListener("change", async function () {
 
 
   const data = new FormData()
@@ -42,6 +42,8 @@ document.querySelector("file-field").addEventListener("change", async function (
 
   })
 
-
+  console.log(cloudinaryResponse.data)
 
 })
+
+
