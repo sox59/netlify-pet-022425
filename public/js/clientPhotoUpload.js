@@ -10,7 +10,7 @@ async function getSignature() {
   const theResponse = await signaturePromise.json()
   console.log(theResponse)
 
-  serverSignature = theResponse.signaturePromise
+  serverSignature = theResponse.signature
   serverTimestamp = theResponse.timestamp
 
 
