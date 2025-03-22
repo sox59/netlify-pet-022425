@@ -10,6 +10,13 @@ document.querySelector("#add-new-pet-form").addEventListener("submit", async fun
 
   }
 
+  if (cloudinaryReturnedObject) {
+
+    pet.public_id = cloudinaryReturnedObject.public_id
+    pet.version = cloudinaryReturnedObject.version
+    pet.signature = cloudinaryReturnedObject.signature
+  }
+
   document.querySelector("#add-new-pet-form").classList.add("form-is-loading")
 
 
