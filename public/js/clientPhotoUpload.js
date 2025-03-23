@@ -47,7 +47,7 @@ document.querySelector("#file-field").addEventListener("change", async function 
 
   cloudinaryReturnedObject = cloudinaryResponse.data
 
-  document.querySelector("#photo-preview").innerHTML = `<img src="https://res.cloudinary.com/dknfdnulf/image/upload/w_300,h_300,c_fill/${cloudinaryResponse.data.public_id}.jpg"/>`
+  document.querySelector("#photo-preview").innerHTML = `<img src="https://res.cloudinary.com/dknfdnulf/image/upload/w_190,h_190,c_fill/${cloudinaryResponse.data.public_id}.jpg"/>`
 
 
 
