@@ -1,6 +1,14 @@
 document.querySelector("#add-new-pet-form").addEventListener("submit", async function (e) {
   e.preventDefault()
 
+  if (isFormLocked) {
+
+    return null
+  }
+
+  isFormLocked = true
+
+
   const pet = {
 
     name: document.querySelector("#name").value,
